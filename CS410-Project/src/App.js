@@ -1,6 +1,6 @@
 import './App.css';
 import {
-  Box, CardMedia, Divider, TextField, Typography,
+  Box, Button, CardMedia, Divider, TextField, Typography,
 } from '@mui/material';
 import { Helmet } from 'react-helmet';
 
@@ -39,6 +39,14 @@ function App() {
             Output sample
           </Typography>
         </Box>
+      </Box>
+      <Box sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        mt: 5,
+      }}
+      >
+        <Button variant="contained" sx={{ m: 4 }}>Submit</Button>
       </Box>
     </Box>
   );
