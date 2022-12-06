@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, jsonify
+from flask_cors import CORS, cross_origin
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from textblob import TextBlob
 import nltk
@@ -6,9 +7,12 @@ import nltk
 
 nltk.download('vader_lexicon')
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 
 @app.route('/sentiment_score', methods=["POST"])
+@cross_origin()
 def sentiment_score():
     inp = request.data.decode()
 
