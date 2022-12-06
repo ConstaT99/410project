@@ -24,10 +24,7 @@ def sentiment_score():
 
     if score1['compound'] < 0 and score2 < 0:
         return jsonify(-1)
-    elif score1['neg'] + score1['pos'] > 0 and score2 > 0:
+    elif score1['compound'] > 0 and score2 > 0:
         return jsonify(1)
     else:
         return jsonify(0)
-
-if __name__ == '__main__':
-    app.run(port=8080)

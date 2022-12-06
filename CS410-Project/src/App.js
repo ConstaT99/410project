@@ -14,7 +14,7 @@ function App() {
   };
 
   const fetchResult = async () => {
-    const result = await fetch('http://127.0.0.1:8080/sentiment_score', {
+    const result = await fetch('http://127.0.0.1:5000/sentiment_score', {
       method: 'POST',
       headers: {
         'Content-Type': 'text/plain',
