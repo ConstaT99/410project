@@ -3,8 +3,35 @@ import {
   Box, Button, CardMedia, Divider, TextField, Typography,
 } from '@mui/material';
 import { Helmet } from 'react-helmet';
+import { useState } from 'react';
 
 function App() {
+  const [input, setInput] = useState('');
+  const [output, setOutput] = useState('Analysis Result');
+
+  const handleInput = (event) => {
+    setInput(event.target.value);
+  };
+
+  const fetchResult = async () => {
+    const result = await fetch('http://127.0.0.1:8080/sentiment_score', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'text/plain',
+      },
+      body: input,
+    });
+
+    const resultInJson = await result.json();
+    if (await resultInJson === 1) {
+      setOutput("It's a positive text");
+    } else if (await resultInJson === -1) {
+      setOutput("It's a negative text");
+    } else {
+      setOutput("It's a neutral text");
+    }
+  };
+
   return (
     <Box>
       <Helmet>
@@ -23,6 +50,7 @@ function App() {
         }}
       >
         <TextField
+          onChange={handleInput}
           multiline
           fullWidth
           label="Please enter text you want to analyze"
@@ -36,7 +64,7 @@ function App() {
         />
         <Box sx={{ width: '40%', mx: 2, bgcolor: '#f0eded' }}>
           <Typography sx={{ m: 2 }}>
-            Output sample
+            {output}
           </Typography>
         </Box>
       </Box>
@@ -46,7 +74,7 @@ function App() {
         mt: 5,
       }}
       >
-        <Button variant="contained" sx={{ m: 4 }}>Submit</Button>
+        <Button onClick={fetchResult} variant="contained" sx={{ m: 4 }}>Submit</Button>
       </Box>
     </Box>
   );
