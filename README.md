@@ -6,7 +6,7 @@ Before opening your browser to try our web application, please clone our code an
 `pip install nltk` `pip install textblob` `pip install flask`
 
 ## 2. Host a local server
-After installing the necessary packages, in your terminal, go to the sourcecode folder `cd sourcecode` and type in the following `npm start`, `flask run` to host a local server in your computer. After that, you will be able to open the webpage http://localhost:3000 in your browser. 
+After installing the necessary packages, in your terminal, go to the sourcecode folder `cd sourcecode` and type in the following `npm install`. Wait until `npm` install all dependencies for you and a new folder `node_module` will generated. Then you need to open two command line, one for start server and one for bring our backend online. change directory to our project and `cd sourcecode` run `npm start` in the first commond line. For the second command line you will also need to change directory to project folder and `cd sourcecode` and then run `flask run` to host a local server in your computer. After that, you will be able to open the webpage http://localhost:3000 in your browser.
 
 ## 3. How to use our web application
 The webpage is very straight forward. A text field is shown on the left where you can enter any sentences, words, or phrases in english. The sentiment analysis result will be shown on the right text field, indicating whether the input text is positive, neutral, or negative. 
