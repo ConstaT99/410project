@@ -1,5 +1,5 @@
 # CS410 Project-- Sentiment Analysis web application
-demo video link: https://drive.google.com/file/d/1vxoRBkm4WVVKKqZE3a8pY2QHsPUoOomD/view?usp=sharing
+demo video link: https://drive.google.com/file/d/1E2VSQC98y4mN3iUGNCconA1ZgOWynNaF/view?usp=sharing
 
 ## 1. Requirements
 Before opening your browser to try our web application, please clone our code and install the necessary dependencies in your terminal by running:
@@ -16,7 +16,7 @@ For windows user, we highly recommend install nodejs by link: https://nodejs.org
 - Will classify a sentence to positive, neutral, or negative sentiment
 
 ## 3. Host a local server
-After installing the necessary packages, in your terminal, go to the sourcecode folder `cd sourcecode` and type in the following `npm install`. Wait until `npm` install all dependencies for you and a new folder `node_module` will generated. Then you need to open two command line, one for start server and one for bring our backend online. change directory to our project and `cd sourcecode` run `npm start` in the first commond line. For the second command line you will also need to change directory to project folder and `cd sourcecode` and then run `flask run` to host a local server in your computer. After that, you will be able to open the webpage http://localhost:3000 in your browser.
+After installing the necessary packages, in your terminal, go to the sourcecode folder `cd sourcecode` and type in the following `npm install`. Wait until `npm` install all dependencies for you and a new folder `node_module` will generated. Then you need to open two command line, one for start server and one for bring our backend online. change directory to our project and `cd sourcecode` run `npm start` in the first command line. For the second command line you will also need to change directory to project folder and `cd sourcecode` and then run `flask run` to host a local server in your computer. After that, you will be able to open the webpage http://localhost:3000 in your browser.
 
 PS: If you are facing a linbreak bugs when you run `npm start`. You can use `npm run lint:fix` to fix it. 
 
