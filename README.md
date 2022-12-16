@@ -1,5 +1,5 @@
 # CS410 Project-- Sentiment Analysis web application
-demo video link: https://drive.google.com/file/d/1UAKZQJsh-LrP7E2mt_mX-HuGYogomIqL/view?usp=sharing
+demo video link: https://drive.google.com/file/d/1iagtVMAJ3kgwqOe925fTiQ8oGlrfXIel/view?usp=sharing
 
 ## 1. Requirements
 Before opening your browser to try our web application, please clone our code and install the necessary dependencies in your terminal by running:
